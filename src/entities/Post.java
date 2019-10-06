@@ -68,4 +68,21 @@ public class Post {
 		comentarios.remove(comentario);
 	}
 
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(titulo).append("\n")
+		.append(likes)
+		.append(" Likes - ")
+		.append(dataPostagem)
+		.append("\n")
+		.append(conteudo)
+		.append("\n\n")
+		.append("Comentários:\n");
+		for (Comentario comentario : comentarios) {
+			sb.append(comentario.getTexto()+"\n");
+		}
+		
+		return sb.toString();
+	}
+
 }
