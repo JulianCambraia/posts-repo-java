@@ -1,8 +1,11 @@
 package application;
 
+import entities.Post;
+
 public class PostsMainStringBuilderPrg {
 
 	public static void main(String[] args) {
-		System.out.println("Inicio do projetinho..."); 
+		Post post = new Post();
+		System.out.println(post); 
 	}
 }
