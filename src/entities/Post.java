@@ -1,10 +1,14 @@
 package entities;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Post {
+	
+	private static SimpleDateFormat dataFormatada = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+	
 	private Date dataPostagem;
 	private String titulo;
 	private String conteudo;
@@ -69,11 +73,12 @@ public class Post {
 	}
 
 	public String toString() {
+		String dataPost = dataFormatada.format(dataPostagem);
 		StringBuilder sb = new StringBuilder();
 		sb.append(titulo).append("\n")
 		.append(likes)
 		.append(" Likes - ")
-		.append(dataPostagem)
+		.append(dataPost)
 		.append("\n")
 		.append(conteudo)
 		.append("\n\n")
